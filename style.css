@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: courier;
+}
+
+html {
+  background: #f9f9f9;
+}
+
+h1 {
+  margin: 40px auto 10px;
+}
+
+input#input {
+  margin: 0 auto;
+  display: block;
+  width: 180px;
+}
+
+div#matches {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 20px;
+  max-width: 80%;
+}
+
+#loader {
+  margin: 10px 0;
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/**
+* Similarity table
+**/
+
+.row {
+  margin-bottom: 20px;
+}
+
+.similarity {
+  font-size: 0.9em;
+  color: #e2a432;
+}
+
+.filename {
+  color: #9c9c9c;
+}

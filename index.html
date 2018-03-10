@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>minhash.js</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
+  <body>
+    <h1 class='center'>minhash.js</h1>
+    <input type='file' id='input' multiple>
+    <script id='match-template' type='text/html'>
+      <% _.forEach(rows, function(row) { %>
+        <div class='row'>
+          <div class='similarity'>Similarity: <%- row.sim %>%</div>
+          <div>
+            <span class='filename'><%- row.aFile %>: </span>
+            <span><%- row.a %><span>
+          </div>
+          <div>
+            <span class='filename'><%- row.bFile %>: </span>
+            <span><%- row.b %><span>
+          </div>
+        </div>
+      <% }); %>
+    </script>
+    <div id='loader' class='center'>Processing...</div>
+    <div class='center'>
+      <div id='matches'></div>
+    </div>
+    <!-- resources -->
+    <script src='js/lodash.min.js'></script>
+    <script src='js/difflib.js'></script>
+    <script src='js/minhash.min.js'></script>
+    <!-- script that uses minhash.js -->
+    <script src='js/sample.js'></script>
+  </body>
+</html>
