@@ -1,0 +1,3 @@
+*.pem
+*.swp
+node_modules
