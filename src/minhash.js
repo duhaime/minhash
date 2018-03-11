@@ -85,7 +85,6 @@ var Minhash = function(config) {
   var config = config || {};
   this.numPerm = config.numPerm || 128;
   this.seed = config.seed || 1;
-  this.hashFunctions = [];
   this.hashvalues = [];
   this.permA = [];
   this.permB = [];

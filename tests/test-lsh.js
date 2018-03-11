@@ -41,7 +41,7 @@ describe('LshIndex', function() {
       var m1 = new Minhash();
       var index = new LshIndex({bandSize: 3});
       index.insert('m1', m1);
-      (m1.hashbands[0].length === 3).should.equal(true);
+      (m1.hashbands[0].split('.').length === 3).should.equal(true);
     })
   });
 })
