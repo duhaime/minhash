@@ -19,7 +19,7 @@ input#input {
   width: 180px;
 }
 
-div#matches {
+div#hits {
   display: inline-block;
   margin: 0 auto;
   text-align: left;
