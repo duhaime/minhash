@@ -1,11 +1,13 @@
 ```
-                   _           _                     _             _
-       _ __ ___   (_)  _ __   | |__     __ _   ___  | |__         (_)  ___
-      | '_ ` _ \  | | | '_ \  | '_ \   / _` | / __| | '_ \        | | / __|
-      | | | | | | | | | | | | | | | | | (_| | \__ \ | | | |  _    | | \__ \
-      |_| |_| |_| |_| |_| |_| |_| |_|  \__,_| |___/ |_| |_| (_)  _/ | |___/
-                                                                |__/
+                            _           _                     _             _
+                _ __ ___   (_)  _ __   | |__     __ _   ___  | |__         (_)  ___
+               | '_ ` _ \  | | | '_ \  | '_ \   / _` | / __| | '_ \        | | / __|
+               | | | | | | | | | | | | | | | | | (_| | \__ \ | | | |  _    | | \__ \
+               |_| |_| |_| |_| |_| |_| |_| |_|  \__,_| |___/ |_| |_| (_)  _/ | |___/
+                                                                         |__/
 ```
+
+[![Build Status](https://travis-ci.org/duhaime/minhash.svg?branch=master)](https://travis-ci.org/duhaime/minhash)
 
 [Minhashing](https://en.wikipedia.org/wiki/MinHash) is an efficient similarity estimation technique that is often used to identify near-duplicate documents in large text collections. This package offers a JavaScript implementation of the minhash algorithm and an efficient [Locality Sensitive Hashing Index](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) for finding similar minhashes in Node.js or web applications.
 
@@ -86,7 +88,7 @@ console.log('Jaccard similarity >= 0.5 to m1:', matches);
 
 ### Example
 
-The [sample application](https://duhaime.github.io/minhash/) uses minhash.js to compute the similarity between several [sample documents](https://duhaime.github.io/minhash/texts):
+The [sample application](https://duhaime.github.io/minhash/) uses minhash.js to compute the similarity between several [sample documents](https://github.com/duhaime/minhash/tree/gh-pages/texts):
 
 ![app preview](https://raw.githubusercontent.com/duhaime/minhash/master/images/preview.png)
 
