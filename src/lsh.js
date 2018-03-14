@@ -40,7 +40,7 @@ var LshIndex = function(args) {
       var start = i * this.bandSize;
       var end = start + this.bandSize;
       var band = minhash.hashvalues.slice(start, end);
-      minhash.hashbands.push(band);
+      minhash.hashbands.push(band.join('.'));
     };
     return minhash.hashbands;
   };
