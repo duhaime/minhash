@@ -1,6 +1,6 @@
 {
   "name": "minhash",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Douglas Duhaime <douglas.duhaime@gmail.com>",
   "description": "Find similar documents quickly",
   "license": "MIT",
