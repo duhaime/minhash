@@ -9,7 +9,7 @@ var Minhash = function(config) {
   // prime is the smallest prime larger than the largest
   // possible hash value (max hash = 32 bit int)
   this.prime = 4294967311;
-  this.maxHash = 2**32-1;
+  this.maxHash = Math.pow(2, 32) - 1;
 
   // initialize the hash values as the maximum value
   this.inithashvalues = function() {
@@ -51,14 +51,14 @@ var Minhash = function(config) {
   this.hash = function(str) {
     var hash = 0;
     if (str.length == 0) {
-      return hash + (2**32/2-1);
+      return hash + this.maxHash;
     }
     for (var i = 0; i < str.length; i++) {
       var char = str.charCodeAt(i);
       hash = ((hash<<5)-hash)+char;
       hash = hash & hash; // convert to a 32bit integer
     }
-    return hash + (2**32/2-1);
+    return hash + this.maxHash;
   }
 
   // estimate the jaccard similarity to another minhash
