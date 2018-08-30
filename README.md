@@ -22,7 +22,7 @@ npm install minhash --save
 If you prefer, you can instead load the package directly in a browser:
 
 ```html
-<script src='https://rawgit.com/duhaime/minhash/master/minhash.min.js' />
+<script src='https://rawgit.com/duhaime/minhash/master/minhash.min.js'></script>
 ```
 
 #### Minhash Usage
@@ -96,5 +96,5 @@ There is also a sample Node.js script that can be run with `node examples/index.
 
 ### Development
 
-To run the test suite — `npm run test`.  
+To run the test suite — `npm run test`.
 To compile and minify minhash.min.js — `npm run build`.
