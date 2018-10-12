@@ -25,7 +25,12 @@ describe('LshIndex', function() {
       index.insert('m1', m1);
       index.insert('m2', m2);
       var results = index.query(m1);
-      (results.indexOf('m2') > -1).should.equal(true);
+      results.should.be.an('array');
+      results.map(result => {
+        result.should.to.have.property('hits');
+        result.should.to.have.property('result');
+        result.should.to.have.property('name');
+      });
     });
   });
 
