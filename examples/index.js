@@ -2,18 +2,18 @@ var Minhash = require('../src/minhash.js');
 var LshIndex = require('../src/lsh.js');
 
 var s1 = ['minhash', 'is', 'a', 'probabilistic', 'data', 'structure', 'for',
-        'estimating', 'the', 'similarity', 'between', 'datasets'];
+  'estimating', 'the', 'similarity', 'between', 'datasets'];
 var s2 = ['minhash', 'is', 'a', 'probability', 'data', 'structure', 'for',
-        'estimating', 'the', 'similarity', 'between', 'documents'];
+  'estimating', 'the', 'similarity', 'between', 'documents'];
 var s3 = ['cats', 'are', 'tall', 'and', 'have', 'been',
-        'known', 'to', 'sing', 'quite', 'loudly'];
+  'known', 'to', 'sing', 'quite', 'loudly'];
 
 var m1 = new Minhash();
 var m2 = new Minhash();
 var m3 = new Minhash();
 
-function hashWords(words, hash) {
-  for (var i=0; i<words.length; i++) {
+function hashWords (words, hash) {
+  for (var i = 0; i < words.length; i++) {
     hash.update(words[i]);
   }
 }
@@ -28,4 +28,4 @@ index.insert('m2', m2);
 index.insert('m3', m3);
 
 var matches = index.query(m1);
-console.log('minhashes with estimated Jaccard similarity >= 0.5', matches);
+console.log('minhashes with estimated Jaccard', matches);
