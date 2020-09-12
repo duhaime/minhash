@@ -22,7 +22,7 @@ npm install minhash --save
 If you prefer, you can instead load the package directly in a browser:
 
 ```html
-<script src='https://rawgit.com/duhaime/minhash/master/minhash.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/duhaime/minhash@master/minhash.min.js'></script>
 ```
 
 #### Minhash Usage
