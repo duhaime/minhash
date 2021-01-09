@@ -37,15 +37,30 @@ var Minhash = function(config) {
 
   // the update function updates internal hashvalues given user data
   this.update = function(str) {
-    for (var i=0; i<this.hashvalues.length; i++) {
-      var a = this.permA[i];
-      var b = this.permB[i];
-      var hash = (a * this.hash(str) + b) % this.prime;
-      if (hash < this.hashvalues[i]) {
-        this.hashvalues[i] = hash;
+    const shingles = this.createShingles(str, 4);
+    shingles.forEach((shingle) => {
+      for (var i=0; i<this.hashvalues.length; i++) {
+        var a = this.permA[i];
+        var b = this.permB[i];
+        var hash = (a * this.hash(shingle) + b) % this.prime;
+        if (hash < this.hashvalues[i]) {
+          this.hashvalues[i] = hash;
+        }
       }
+    });
+  };
+
+  this.createShingles = function(str, shinglesWords, splitter=' ') {
+    const shingles = [];
+    const splittedWords = str.split(splitter);
+    if (splittedWords.length < shinglesWords) {
+      return [str.toLowerCase()];
     }
-  }
+    for (let i = 0; i < splittedWords.length - shinglesWords + 1; i++) {
+      shingles.push(splittedWords.slice(i, i + shinglesWords).join(' ').toLowerCase());
+    }
+    return shingles;
+  };
 
   // hash a string to a 32 bit unsigned int
   this.hash = function(str) {
