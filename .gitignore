@@ -1,3 +1,6 @@
 *.pem
 *.swp
+.idea
+.vscode
 node_modules
+minhash.min.js
